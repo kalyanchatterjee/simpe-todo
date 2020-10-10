@@ -8,15 +8,17 @@ function TodoItem(props) {
   };
   return (
     <div style={styles}>
-      <h2>Priorty: {props.item.priority}</h2>
+      <h4>Priorty: {props.item.priority}</h4>
       <input
         type="checkbox"
         checked={props.item.completed}
         onChange={() => props.handleChange(props.item.id)}
       />
-      <label> {props.item.text}</label>
+      <label>&nbsp;{props.item.text}</label>
+      <br />
       <button
-        style={{ marginLeft: 10, color: "red" }}
+        className="btn btn-danger btn-sm"
+        style={{ marginLeft: 10 }}
         onClick={() => props.handleDelete(props.item.id)}
       >
         Delete
